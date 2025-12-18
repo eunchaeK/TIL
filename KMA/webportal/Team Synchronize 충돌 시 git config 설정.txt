@@ -1,0 +1,20 @@
+--------------------------------------------------------
+ 변경사항 없는 파일 충돌 발생 시
+--------------------------------------------------------
+1. 해당 프로젝트 workspace 하위 git bash 실행
+
+2. git 상태 확인: modified 파일 리스트 확인
+$ git status
+
+3. 해당 파일 변경 내용 확인
+$ git diff {경로/파일명}
+
+※^M 변경사항으로 표시되면 git config 변경으로 제외 가능
+$ git config --global core.whitespace cr-at-eol
+
+4. 이클립스 pull
+-Git Staging 에서 해당 파일 Assume Unchanged 후 pull 받기 
+
+5. pull 이후에도 변경사항 없는 파일 상태 modified인 경우
+-Git Staging에서 다시 Assume Unchanged
+-Package Explorer에서 해당 파일 우클릭 > Team > Advanced > No Assum Unchanged
