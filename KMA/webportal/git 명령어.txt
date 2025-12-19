@@ -3,6 +3,17 @@
 -------------------------------------------------
 -커밋 상태 확인: git staus
 -git 로그 확인: git log
--원격지 push: git push origin master
+-원격지 push: git push origin {master/main}
 
+
+-------------------------------------------------
+ gitlab 서버 로그 조회
+-------------------------------------------------
+※CICD 서버에서 실행 
+
+gitlab-ctl tail {service}
+
+ex)
+gitlab-ctl tail postgresql
+gitlab-ctl tail nginx
 
